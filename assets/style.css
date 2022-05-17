@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: gray;
+}
+
+header {
+    text-align: center;
+    background: gray;
+    padding: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background: #0aa1ec;
+}
+
+.container {
+    margin: 50px 5px 0 5px;
+    
+    max-width: 600px;
+    width: 100%;
+
+}
+
+#new-task {
+    width: 100%;
+    display: flex;
+}
+
+#task-name {
+    padding: 8px;
+    border-radius: 5px;
+    width: 80%;
+    border: 2px gray solid;
+    background: white;
+}
+
+#task-name:focus {
+    outline: none;
+}
+
+#task-name:hover {
+    border: 2px solid blue;
+}
+
+
+#button {
+    width: 20%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+#button:hover {
+    border: 2px solid blue;
+}
+
+#tasks-list {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#tasks-list p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+}
+
+#tasks {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+.task input{
+    width: 30px;
+    cursor: pointer;
+}
+
+.task-done {
+    text-decoration: line-through black 2px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
