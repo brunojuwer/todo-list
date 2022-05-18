@@ -1,6 +1,8 @@
 const task = document.querySelector('#tasks');
 const button = document.querySelector('#button');
 const taskName = document.querySelector('#task-name');
+const addTask = document.querySelector('#new-task');
+const p = document.createElement('p');
 let tasks = [];
 
 
@@ -13,18 +15,30 @@ function addNewElement() {
     const div = document.createElement('div');
     let newTask = taskName.value;
 
-    div.classList.add('task');
-    div.innerHTML = `<input type="checkbox" onclick="verifyCheck()">${newTask}`;
-    task.insertAdjacentElement('beforeend', div); //adiciona a nova tarefa no final de todas as outras
+    if(newTask !== "") {
+        div.classList.add('task');
+        div.innerHTML = `<input type="checkbox" onclick="verifyCheck()">${newTask}`;
+        task.insertAdjacentElement('beforeend', div); //adiciona a nova tarefa no final de todas as outras
     
-    taskName.value = ""; // deixa o input zerado
-    arrayOfTasks();
+        taskName.value = ""; // deixa o input zerado
+    
+        arrayOfTasks(); // chama a função para ler os novos elementos
+
+    } else {
+        // adiciona um aviso para não deixar a tarefa sem nome
+        p.style.display = 'block';
+        p.classList.add('warning');
+        p.innerText = 'Você deve adicionar um nome a tarefa ;)';
+        addTask.insertAdjacentElement('afterend', p);
+
+    }
 }
 
 
 // Adiciona a tarefa apertando o enter
 taskName.addEventListener('keyup', event => {
-    event.key === 'Enter' ? addNewElement() : false;
+    event.key === 'Enter' ? addNewElement() : p.style.display = 'none';
+        
 })
     
 // Adiciona a tarefa clicando no botão

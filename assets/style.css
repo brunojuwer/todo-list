@@ -68,6 +68,13 @@ main {
     border: 2px solid blue;
 }
 
+.warning {
+    color: rgba(235, 70, 70, 0.7);
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 #tasks-list {
     margin-top: 30px;
     width: 100%;
