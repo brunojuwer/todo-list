@@ -1,5 +1,6 @@
 const task = document.querySelector('#tasks');
 const button = document.querySelector('#button');
+const clearButton = document.querySelector('.clear-button')
 const taskName = document.querySelector('#task-name');
 const addTask = document.querySelector('#new-task');
 const p = document.createElement('p');
@@ -52,14 +53,17 @@ function verifyCheck() {
     tasks.forEach(task => {
         task.addEventListener('click', event => {
             const isTaskChecked = task.children[0].checked === true;
-    
-            if (isTaskChecked){
-                task.classList.add('task-done');
-            } else {
-                task.classList.remove('task-done');
-            }
+
+            isTaskChecked ? task.classList.add('task-done') : task.classList.remove('task-done');
         })
     })
 }
 
 
+// limpa as tarefas ja marcadas como feitas
+clearButton.addEventListener('click', event => {
+    tasks.forEach(task => {
+        task.classList[1] === 'task-done' ? task.remove() : false;
+    })
+})
+        

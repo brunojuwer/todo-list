@@ -62,6 +62,8 @@ main {
     border: 2px solid gray;
     margin-left: 2px;
     cursor: pointer;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #button:hover {
@@ -105,3 +107,18 @@ main {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
+
+.clear-tasks-done button{
+    margin-top: 80px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+.clear-tasks-done button:hover {
+    border: 2px solid blue;
+}
