@@ -2,4 +2,5 @@
 Aplicação simples de todolist
 
 
-![todo-list](https://user-images.githubusercontent.com/60712131/169105006-1782d4ab-23ec-4b7b-a687-acc155a8ead8.gif)
+
+![todolistbruno](https://user-images.githubusercontent.com/60712131/170777897-33fd453e-7e2b-4758-9fde-9d9ba8ca2416.gif)
